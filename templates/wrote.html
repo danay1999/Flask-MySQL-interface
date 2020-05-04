@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Assignment 5</title>
+  <meta name="description" content="A website to document natural disasters and where you can request help or offer help to people in need">
+  
+  <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ 
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/skeleton.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+  
+  
+
+</head>
+<body >
+  
+  <header  class="main_nav purple">
+    <div class="container">
+        <div class="one column">
+        <a class="toptextwhite"  href="{{ url_for('index') }}">Home</a>
+        </div> 
+    </div> 
+  </header>
+
+<div>
+  <div class="row container ">
+
+       <h3>Wrote </h3> <br> 
+    
+       <div class = "two columns"><b>Author No.</b></div>
+       <div class = "three columns"><b>Author Name</b></div>
+       <div class = "one column "><b>Code</b></div>
+       <div class = "four columns"><b>Tittle</b></div>
+       <div class = "one column"><b>Sequence</b></div><br>
+
+        {% for row in results %}
+      
+          <div class = "two columns">{{row['authorNum']}}</div>
+          <div class = "three columns">{{row['authorFirst']}} {{row['authorLast']}}</div>
+          <div class = "one column">{{row['bookCode']}}</div>
+          <div  style="text-align:left;" class = "four columns">{{row['title']}}</div>
+          <div class = "one column">{{row['sequence']}}</div><br>
+          
+        {% endfor %}
+
+   </div>
+  </div>
+ 
+<footer class="row bluefooter nopadding">
+    
+</footer>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Assignment 5</title>
+  
+  <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ 
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/skeleton.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+ 
+</head>
+
+<style>A {text-decoration: none;} </style>
+<body >
+
+  <header  class="main_nav purple">
+    <div class="container">
+        <div class="one column">
+        <a class="toptextwhite"  href="{{ url_for('index') }}">Home</a>
+        </div>  
+  </header>
+
+<div>
+  
+  
+  <div class="row container ">
+
+    <h5> Fill out the form to add a new book </h5><br>
+
+    <!-- Form to collect the needed information to add a new book to the database–––– -->
+    <form method="post">
+            <input type="text" placeholder="Book Code. Ex 4532" name="bookCode" required/><br>
+            <input type="text" placeholder="Book Title" name="title" required/><br>
+            <input type="text" placeholder="Publisher Code. Ex TR" name="publisherCode" required/><br>
+            <input type="text" placeholder="Type. Ex SCI" name="bookType" required/><br>
+            <input type="text" placeholder="Paperback (Y/N)" name="paperback" required/><br><br>
+            <input class="button-primary" type="submit" value="Add Book">
+    </form>
+
+  </div>
+   Once you fill out the needed information and click "Add Book" you will be redirected to the list of all the books. 
+   If you would like to check the list of books before adding a new book click here: <a href="{{ url_for('book') }}"><b>Books</b></a>
+</div>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Assignment 5</title>
+  
+  <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ 
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/skeleton.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+ 
+</head>
+
+<style>A {text-decoration: none;} </style>
+<body >
+
+  <header  class="main_nav purple">
+    <div class="container">
+        <div class="one column">
+        <a class="toptextwhite"  href="{{ url_for('index') }}">Home</a>
+        </div>  
+  </header>
+
+<div>
+  
+  
+  <div class="row container ">
+
+    <h5> Fill out the form to modify author's information </h5><br>
+
+    <!-- Form to collect the needed information to modify author info–––– -->
+      <form method="post">
+            <input type="text" placeholder="Auhtor No." name="authorNum" required/><br>
+            <input type="text" placeholder="First Name" name="authorFirst" /><br>
+            <input type="text" placeholder="Last Name" name="authorLast" /><br>
+            <input class="button-primary" type="submit" value="Update Author">
+    </form>
+
+  </div>
+   Once you fill out the needed information and click "Update Author" you will be redirected to the list of all the authors. 
+   If you would like to check the list of authors before modifying it click here: <a href="{{ url_for('author') }}"><b>Author</b></a> 
+</div>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

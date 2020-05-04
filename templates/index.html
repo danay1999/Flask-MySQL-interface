@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Assignment 5</title>
+  <meta name="description" content="A web application to manipulate the Henry Books Database">
+  
+  <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/skeleton.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+ 
+  
+
+</head>
+
+
+ <style>A {text-decoration: none;} </style>
+<body >
+  
+  <header  class="main_nav purple">
+    <div class="container">
+        <div class="one column">
+        <a style="font-size:1.5em"class="toptextwhite"  href="{{ url_for('index') }}">Home</a>
+        </div>  
+        
+        <form class="searchresults" method="post" action="/searchresults" 
+         style="margin:auto;max-width:300px">
+            <input type="text" placeholder="Search book" name="string"> <button class="button-primary" type="submit">Search</button>
+        </form>
+        
+  </header>
+
+  <div class="row container ">
+    <div style="text-align:left;" class="twelve columns">
+        <p><b>Maintenance Functions</b></p>
+        <p>Would you like to <b>add</b> some information?</p>
+        <a href="{{ url_for('addbook')}}"><b>Add Book</b></a> Click here if you would like to add a new book. <br>
+        <a href="{{ url_for('addpublisher')}}"><b>Add Publisher</b></a> Click here if you would like to add a new publisher. <br>
+        <a href="{{ url_for('addauthor')}}"><b>Add Author</b></a> Click here if you would like to add a new author. <br>
+        <a href="{{ url_for('addcopy')}}"><b>Add Copy</b></a> Click here if you would like to add a new copy. <br> <br>
+
+        <p>Would you like to <b>delete</b> some information?</p>
+        <a href="{{ url_for('deletebook')}}"><b>Delete Book</b></a> Click here if you would like to delete a book. <br>
+        <a href="{{ url_for('deletepublisher')}}"><b>Delete Publisher</b></a> Click here if you would like to delete a publisher. <br>
+        <a href="{{ url_for('deleteauthor')}}"><b>Delete Author</b></a> Click here if you would like to delete an author. <br>
+        <a href="{{ url_for('deletecopy')}}"><b>Delete Copy</b></a> Click here if you would like to delete a copy. <br> <br>
+        
+        <p>Would you like to <b>update</b> some information?</p>
+        <a href="{{ url_for('updatebook')}}"><b>Update books</b></a> Click here if you would like to update some book information. <br>
+        <a href="{{ url_for('updatepublisher')}}"><b>Update publisher</b></a> Click here if you would like to update some publisher information. <br>
+        <a href="{{ url_for('updateauthor')}}"><b>Update author</b></a> Click here if you would like to update some author information. <br>
+        <a href="{{ url_for('updatecopy')}}"><b>Update copy</b></a> Click here if you would like to update some informationa about available copies. <br><br>
+        
+    </div>
+  
+
+
+   <div style="text-align:left;" class="twelve columns">
+        <p >List all available books, publishers, authors, and more by using the links below</p>
+        <a href="{{ url_for('author') }}"><b>Authors</b></a>: This page lists all the authors names.<br>
+        <a href="{{ url_for('book') }}"><b>Books</b></a>: This page lists all the books. <br>
+        <a href="{{ url_for('branch') }}"><b>Branch</b></a>: This page lists all branches. <br>
+        <a href="{{ url_for('copy') }}"><b>Copy</b></a>: This page lists all available copies of books. <br>
+        <a href="{{ url_for('inventory') }}"><b>Inventory</b></a>: This page lists the inventory of books. <br>
+        <a href="{{ url_for('publisher') }}"><b>Publisher</b></a>: This page lists all publishers. <br>
+        <a href="{{ url_for('wrote') }}"><b>Wrote</b></a>: This page shows a list of books and authors. <br>
+  </div> 
+</div>
+
+ 
+<footer class="row bluefooter nopadding">
+      
+</footer>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

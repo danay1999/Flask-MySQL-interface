@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <!-- Basic Page Needs
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>Assignment 5</title>
+        <meta name="description" content="A website to document natural disasters and where you can request help or offer help to people in need">
+  
+        <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ 
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/skeleton.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+    </head>
+    <body>
+    
+<header  class="main_nav purple">
+    <div class="container">
+        <div class="one column">
+        <a class="toptextwhite"  href="{{ url_for('index') }}">Home</a>
+        </div>  
+  </header>
+
+    <div class="container">
+
+    
+  <div class="row twelve columns">
+
+        <h4>Search results</h4> <br>
+    
+       
+       <div  class = "three columns"><b>Title</b></div>
+       <div  class = "three columns"><b> Author </b></div>
+       <div  class = "two columns"><b>Publisher</b></div> 
+       <div  class = "one column"><b>Available</b></div>
+       <div  class = "two columns"><b>Branch Name</b></div>
+       <br>
+      
+        {% for row in results %}
+             
+            <br> 
+            <div  class = "three columns">{{row['title']}}</div>
+            <div  class = "three columns">{{row['authorFirst']}} {{row['authorLast']}}</div> 
+            <div  class = "two columns">{{row['publisherName']}}</div>
+            <div  class = "one column">{{row['OnHand']}}</div>
+            <div  class = "two columns">{{row['branchName']}}</div><br>     
+                
+        {% endfor %}
+
+   </div>
+  </div>
+    
+        
+    </body>
+</html>

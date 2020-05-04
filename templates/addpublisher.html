@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Assignment 5</title>
+  
+  <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ 
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/skeleton.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+ 
+</head>
+
+<style>A {text-decoration: none;} </style>
+<body >
+
+  <header  class="main_nav purple">
+    <div class="container">
+        <div class="one column">
+        <a class="toptextwhite"  href="{{ url_for('index') }}">Home</a>
+        </div>  
+  </header>
+
+<div>
+  
+  
+  <div class="row container ">
+
+    <h5> Fill out the form to add a new publisher </h5><br>
+
+    <!-- Form to collect the needed information to add a new publisher to the database–––– -->
+    <form method="post">
+            <input type="text" placeholder="Publisher Code. Ex PE" name="publisherCode" required/><br>
+            <input type="text" placeholder="Publisher Name" name="publisherName" required/><br>
+            <input type="text" placeholder="City" name="city" required/><br>
+            <input class="button-primary" type="submit" value="Add Publisher">
+    </form>
+
+  </div>
+   Once you fill out the needed information and click "Add Publisher" you will be redirected to the list of all publishers. 
+   If you would like to check the list of publishers before adding a new publisher click here: <a href="{{ url_for('publisher') }}"><b>Publisher</b></a> 
+</div>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

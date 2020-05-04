@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Assignment 5</title>
+  
+  <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ 
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/skeleton.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+ 
+</head>
+
+<style>A {text-decoration: none;} </style>
+<body >
+
+  <header  class="main_nav purple">
+    <div class="container">
+        <div class="one column">
+        <a class="toptextwhite"  href="{{ url_for('index') }}">Home</a>
+        </div>  
+  </header>
+
+<div>
+  
+  
+  <div class="row container ">
+
+    <h5> Fill out the form to delete a copy </h5><br>
+
+    <!-- Form to collect the needed information to delete a copy from the database–––– -->
+    <form method="post">
+            <input type="text" placeholder="Book Code" name="bookCode" required/><br>
+            <input type="text" placeholder="Copy No. Ex. 1" name="copyNum" required/><br>
+            <input class="button-primary" type="submit" value="Delete Copy">
+    </form>
+
+  </div>
+   Once you fill out the needed information and click "Delete Copy" you will be redirected to the list of the remaining copies. 
+   If you would like to check the list of copies before deleting one click here: <a href="{{ url_for('copy') }}"><b>Copy</b></a> 
+</div>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

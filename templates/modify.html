@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Assignment 5</title>
+  <meta name="description" content="A website to document natural disasters and where you can request help or offer help to people in need">
+  
+  <!-- Mobile Specific Metas–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ 
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/skeleton.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+ 
+  
+
+</head>
+<body >
+  
+
+  <header  class="main_nav purple">
+    <div class="container">
+        <div class="one column">
+        <a class="toptextwhite"  href="{{ url_for('index') }}">Home</a>
+        </div>  
+        <div class="two columns">
+        <a class="toptextwhite"  href="{{ url_for('maintenance') }}">Maintenance Functions</a>
+        </div>  
+        <div class="one column">
+        <a class="toptextwhite"  href="{{ url_for('author') }}">Authors</a>
+        </div>
+        <div class="one column">
+        <a class="toptextwhite"  href="{{ url_for('book') }}">Books</a>
+        </div>
+  </header>
+
+<div>
+  <div class="row container ">
+
+    </div>
+    </div>
+ 
+<footer class="row bluefooter nopadding">
+      
+</footer>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
